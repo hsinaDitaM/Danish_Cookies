@@ -47,10 +47,8 @@
 
   
   
-
-  
-      ,"page1": {
-          "title": "Advanced Functional Analysis",
+      ,"page0": {
+          "title": "3D-Animation",
           "content": "",
           "url": "https://hsinaditam.github.io/Danish_Cookies/AFA/",
           "relUrl": "/AFA/",
@@ -60,7 +58,42 @@
   
 
   
+
+  
       ,"page2": {
+          "title": "AFA",
+          "content": "",
+          "url": "https://hsinaditam.github.io/Danish_Cookies/AFA/",
+          "relUrl": "/AFA/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page3": {
+          "title": "Am-lit",
+          "content": "",
+          "url": "https://hsinaditam.github.io/Danish_Cookies/AFA/",
+          "relUrl": "/AFA/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page4": {
+          "title": "Physics",
+          "content": "",
+          "url": "https://hsinaditam.github.io/Danish_Cookies/AFA/",
+          "relUrl": "/AFA/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page5": {
           "title": "About Me",
           "content": "This website is powered by fastpages [^1]. . About Me . learn all about Mati Danish . My Birthday is May 30th, 2006. | My full name is Matiullah Danish | I learnt HTML when i was 13 years old | I learnt Python during the lockdown since there was nothing else to do. | In this class, i want to learn how to code in javascrpt and durther my knoladge | My favorite TV shows are “The Boys”, “Breaking Bad”, and “The Walking Dead”. | My favorite Movie is Cars 2 | My favorite album is Virtue by The Voidz. | .",
           "url": "https://hsinaditam.github.io/Danish_Cookies/about/",
@@ -92,7 +125,7 @@
   
 
   
-      ,"page11": {
+      ,"page14": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://hsinaditam.github.io/Danish_Cookies/robots.txt",
