@@ -101,7 +101,7 @@ plugins:
 paginate: 15
 paginate_path: /page:num/
 
-remote_theme: jekyll/slate
+remote_theme: jekyll/Hacker
 
 titles_from_headings:
   enabled:     true
