@@ -3,12 +3,11 @@
 settings.ini
 Gemfile.lock
 images/copied_from_nb/
-_posts/2020-02-20-test.ipynb
-_posts/2022-08-29-TP120-python_lists.ipynb
-_posts/2022-08-30-bash-output.ipynb
-_posts/2022-08-30-vocab-test.ipynb
-_posts/2022-08-30-vocab-wk1.ipynb
-images/images/
+_posts/2020-02-20-test.md
+_posts/2022-08-29-TP120-python_lists.md
+_posts/2022-08-30-bash-output.md
+_posts/2022-08-30-vocab-test.md
+_posts/2022-08-30-vocab-wk1.md
 
 *.swp
 ~*
