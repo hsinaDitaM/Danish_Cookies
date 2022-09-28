@@ -1,0 +1,58 @@
+---
+layout: page
+title: Table
+permalink: /schedule/
+---
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, td {
+  border: 2px solid black;
+}
+</style>
+</head>
+<body>
+
+<p>Click the button to create a TABLE, a TR and a TD element.</p>
+
+<button onclick="addRow()">Add Row</button>
+<button onclick="addColumn()">Add Column</button>
+
+<script>
+function addRow() {
+  var x = document.createElement("TABLE");
+  x.setAttribute("id", "myTable");
+  document.body.appendChild(x);
+
+  var y = document.createElement("TR");
+  y.setAttribute("id", "myTr");
+  document.getElementById("myTable").appendChild(y);
+
+  var z = document.createElement("TD");
+  var t = document.createTextNode("cell");
+  z.appendChild(t);
+  document.getElementById("myTr").appendChild(z);
+}
+
+function addColumn() {
+  var x = document.createElement("TABLE");
+  x.setAttribute("id", "myTable");
+  document.body.appendChild(x);
+
+  var y = document.createElement("TD");
+  y.setAttribute("id", "myTd");
+  document.getElementById("myTable").appendChild(y);
+
+  var z = document.createElement("TD");
+  var t = document.createTextNode("cell");
+  z.appendChild(t);
+  document.getElementById("myTd").appendChild(z);
+}
+</script>
+
+</body>
+</html>
+
