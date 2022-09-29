@@ -1,0 +1,218 @@
+---
+layout: page
+title: Table
+permalink: /table/
+---
+
+<html>
+    <head>
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        </style>
+         <script>
+            // define an HTML conversion "method" associated with Classroom
+            Classroom.prototype._toHtml = function() {
+              // HTML Style is build using inline structure
+              var style = (
+                "display:inline-block;" +
+                "border: 2px solid grey;" +
+                "box-shadow: 0.8em 0.4em 0.4em grey;"
+              );
+            
+              // HTML Body of Table is build as a series of concatenations (+=)
+              var body = "";
+              // Heading for Array Columns
+              body += "<tr>";
+              body += "<th><mark>" + "Name" + "</mark></th>";
+              body += "<th><mark>" + "GitHub ID" + "</mark></th>";
+              body += "<th><mark>" + "Class Of" + "</mark></th>";
+              body += "<th><mark>" + "Role" + "</mark></th>";
+              body += "</tr>";
+              // Data of Array, iterate through each row of compsci.classroom 
+              for (var row of compsci.classroom) {
+                // tr for each row, a new line
+                body += "<tr>";
+                // td for each column of data
+                body += "<td>" + row.name + "</td>";
+                body += "<td>" + row.ghID + "</td>";
+                body += "<td>" + row.classOf + "</td>";
+                body += "<td>" + row.role + "</td>";
+                // tr to end line
+                body += "<tr>";
+              }
+            
+               // Build and HTML fragment of div, table, table body
+              return (
+                "<div style='" + style + "'>" +
+                  "<table>" +
+                    body +
+                  "</table>" +
+                "</div>"
+              );
+            
+            };
+            
+            // IJavaScript HTML processor receive parameter of defined HTML fragment
+            $$.html(compsci._toHtml());
+            // define an HTML conversion "method" associated with Classroom
+            Classroom.prototype._toHtml = function() {
+              // HTML Style is build using inline structure
+              var style = (
+                "display:inline-block;" +
+                "border: 2px solid grey;" +
+                "box-shadow: 0.8em 0.4em 0.4em grey;"
+              );
+            
+              // HTML Body of Table is build as a series of concatenations (+=)
+              var body = "";
+              // Heading for Array Columns
+              body += "<tr>";
+              body += "<th><mark>" + "Name" + "</mark></th>";
+              body += "<th><mark>" + "GitHub ID" + "</mark></th>";
+              body += "<th><mark>" + "Class Of" + "</mark></th>";
+              body += "<th><mark>" + "Role" + "</mark></th>";
+              body += "</tr>";
+              // Data of Array, iterate through each row of compsci.classroom 
+              for (var row of compsci.classroom) {
+                // tr for each row, a new line
+                body += "<tr>";
+                // td for each column of data
+                body += "<td>" + row.name + "</td>";
+                body += "<td>" + row.ghID + "</td>";
+                body += "<td>" + row.classOf + "</td>";
+                body += "<td>" + row.role + "</td>";
+                // tr to end line
+                body += "<tr>";
+              }
+            
+               // Build and HTML fragment of div, table, table body
+              return (
+                "<div style='" + style + "'>" +
+                  "<table>" +
+                    body +
+                  "</table>" +
+                "</div>"
+              );
+            
+            };
+            
+            // IJavaScript HTML processor receive parameter of defined HTML fragment
+            $$.html(compsci._toHtml());
+        </script>
+        </head>
+        <body>
+        
+        <h2>Tri 1</h2>
+        
+        <table>
+          <tr>
+            <th></th>
+            <th>Blogs</th>
+            <th>Notebooks</th>
+            <th>Hacks</th>
+            <th>Review Tickets</th>
+          </tr>
+          <tr>
+            <td>Week 12</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Week 11</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Week 10</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Week 9</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Week 8</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Week 7</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Week 6 </td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Week 5</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Week 4</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Week 3</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Week 2</td>
+            <td>-</td>
+            <td>-</td>
+            <td><a href="https://hsinaditam.github.io/Danish_Cookies/jupyter/hacks/wk2/2022/08/31/hacks-wk2.html">Theme Hacks</a></td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>week 1</td>
+            <td><a href="https://hsinaditam.github.io/Danish_Cookies/jupyter/2022/08/30/vocab-wk1.html">Vocabulary</a></td>
+            <td><a href="https://hsinaditam.github.io/Danish_Cookies/collegeboard/python_lists">Lists, Dictionaries, Iteration</a></td>
+            <td><a href="https://hsinaditam.github.io/Danish_Cookies/jupyter/wk1/2022/08/30/bash-output.html">Bash Hacks</a>
+              <br/>
+              <a href="https://hsinaditam.github.io/Danish_Cookies/jupyter/2022/08/30/vocab-test.html">Vocab Test</a></td>
+            <td><a href="https://github.com/hsinaDitaM/Danish_Cookies/issues/2">Review ticket</a></td>
+          </tr>
+        </table>
+    </body>
+    </html>
+ 
