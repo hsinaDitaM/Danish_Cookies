@@ -173,10 +173,10 @@
 
   
       ,"page9": {
-          "title": "Table",
-          "content": "&lt;!DOCTYPE html&gt; . . Click the button to create a TABLE, a TR and a TD element. . Add Row Add Column .",
-          "url": "https://hsinaditam.github.io/Danish_Cookies/schedule/",
-          "relUrl": "/schedule/",
+          "title": "Review tickets",
+          "content": "&lt;!DOCTYPE html&gt; . . Home About Me! Tickets Week 1 1 Week 2 Week 3 Week 4 .",
+          "url": "https://hsinaditam.github.io/Danish_Cookies/tickets/",
+          "relUrl": "/tickets/",
           "date": ""
       }
       
