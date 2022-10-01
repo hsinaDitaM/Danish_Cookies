@@ -171,6 +171,14 @@
   
 
   
+      ,"page11": {
+          "title": "Table",
+          "content": ". Tri 1 . Name Role Grad Year Github ID . Mati | Scrum Master | 2024 | hsinaDitaM | . Qais | Scrum Master | 2025 | Qaisj1 | . Vyaan | Frontend | 2025 | vyaang11 | . Nikhil | Backend | 2029 | nikhailc | - | . .",
+          "url": "https://hsinaditam.github.io/Danish_Cookies/table/",
+          "relUrl": "/table/",
+          "date": ""
+      }
+      
   
 
   
@@ -180,7 +188,10 @@
   
 
   
-      ,"page14": {
+  
+
+  
+      ,"page15": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://hsinaditam.github.io/Danish_Cookies/robots.txt",
