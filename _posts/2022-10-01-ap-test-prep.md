@@ -6,4 +6,4 @@
 - categories: [jupyter,hacks,wk6]
 - author: Mati Danish
 
-![Test Prep](/Users/matidanish/vscode/Danish_Cookies/images/AP_TEST_PREP.png)
+![Test Prep](images/AP_TEST_PREP.png)
