@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Physics
-permalink: /physics/
+title: Other Classes
+permalink: /etc/
 ---
 
 # Unit 1:
