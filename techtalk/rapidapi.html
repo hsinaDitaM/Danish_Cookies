@@ -210,7 +210,7 @@ window.onload = wrap_img;
 
 <span class="c1"># Request Covid Data</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"GET"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
-<span class="c1"># print(response.text)  # uncomment this line to see raw data</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">)</span>  <span class="c1"># uncomment this line to see raw data</span>
 
 <span class="c1"># This code looks for "world data"</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"World Totals"</span><span class="p">)</span>
@@ -239,7 +239,8 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>World Totals
+<pre>&lt;bound method Response.json of &lt;Response [200]&gt;&gt;
+World Totals
 total_cases 509,268,964
 new_cases 204,268
 total_deaths 6,242,509
@@ -307,7 +308,7 @@ tests_per_1m_population 2,990,303
 <span class="n">url</span> <span class="o">=</span> <span class="s2">"https://coinranking1.p.rapidapi.com/coins"</span>
 <span class="n">querystring</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"referenceCurrencyUuid"</span><span class="p">:</span><span class="s2">"yhjMzLPhuIDl"</span><span class="p">,</span><span class="s2">"timePeriod"</span><span class="p">:</span><span class="s2">"24h"</span><span class="p">,</span><span class="s2">"tiers[0]"</span><span class="p">:</span><span class="s2">"1"</span><span class="p">,</span><span class="s2">"orderBy"</span><span class="p">:</span><span class="s2">"marketCap"</span><span class="p">,</span><span class="s2">"orderDirection"</span><span class="p">:</span><span class="s2">"desc"</span><span class="p">,</span><span class="s2">"limit"</span><span class="p">:</span><span class="s2">"50"</span><span class="p">,</span><span class="s2">"offset"</span><span class="p">:</span><span class="s2">"0"</span><span class="p">}</span>
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-	<span class="s2">"X-RapidAPI-Key"</span><span class="p">:</span> <span class="s2">"jcmbea0fa2ff5msh7f14bf69be38ca6p175482jsn6c4988114560"</span><span class="p">,</span>  <span class="c1"># place your key here</span>
+	<span class="s2">"X-RapidAPI-Key"</span><span class="p">:</span> <span class="s2">"fdcfde47b5msh587d8d1cc3ff1dap13f3e3jsnb4f74da50f3e"</span><span class="p">,</span>  <span class="c1"># place your key here</span>
 	<span class="s2">"X-RapidAPI-Host"</span><span class="p">:</span> <span class="s2">"coinranking1.p.rapidapi.com"</span>
 <span class="p">}</span>
 
