@@ -160,17 +160,6 @@
 
   
       ,"page1": {
-          "title": "Schedule",
-          "content": ". Tri 1 . Blogs Notebooks Hacks Review Tickets . Week 12 | - | - | - | - | . Week 11 | - | - | - | - | . Week 10 | - | - | - | - | . Week 9 | - | - | - | - | . Week 8 | - | - | - | - | . Week 7 | - | - | - | - | . Week 6 | - | - | - | - | . Week 5 | - | - | - | - | . Week 4 | - | - | - | - | . Week 3 | - | - | - | | . Week 2 | - | - | Theme Hacks | - | . week 1 | Vocabulary | Lists, Dictionaries, Iteration | Bash Hacks Vocab Test | Review ticket | . .",
-          "url": "https://hsinaditam.github.io/Danish_Cookies/schedule/",
-          "relUrl": "/schedule/",
-          "date": ""
-      }
-      
-  
-
-  
-      ,"page2": {
           "title": "Tools",
           "content": "&lt;!DOCTYPE html&gt; . . External tools to help improve your coding skills! . . Learn HTML. Learn CSS. Learn Javascript. Learn Python. .",
           "url": "https://hsinaditam.github.io/Danish_Cookies/tools/",
@@ -181,7 +170,7 @@
   
 
   
-      ,"page3": {
+      ,"page2": {
           "title": "About Me",
           "content": "learn all about Mati Danish . My Birthday is May 30th, 2006. | My full name is Matiullah Danish | I learnt HTML when i was 13 years old | I learnt Python during the lockdown since there was nothing else to do. | In this class, i want to learn how to code in javascrpt and durther my knoladge | My favorite TV shows are “The Boys”, “Breaking Bad”, and “The Walking Dead”. | My favorite Movie is Cars 2 | My favorite album is Virtue by The Voidz. | .",
           "url": "https://hsinaditam.github.io/Danish_Cookies/about/",
@@ -194,18 +183,7 @@
   
 
   
-      ,"page5": {
-          "title": "Review tickets",
-          "content": "&lt;!DOCTYPE html&gt; . . Home About Me! Tickets Week 1 1 Week 2 Week 3 Week 4 .",
-          "url": "https://hsinaditam.github.io/Danish_Cookies/tickets/",
-          "relUrl": "/tickets/",
-          "date": ""
-      }
-      
-  
-
-  
-      ,"page6": {
+      ,"page4": {
           "title": "Other Classes",
           "content": "Unit 1: . All of the equation that is useful in Physics one!’ . toc: false | branch: master | badges: true | comments: true | author: Mati Danish | categories: [fastpages, jupyter] | . warning: unit 1 not finished. More the be added. . x = (delta)x/time .",
           "url": "https://hsinaditam.github.io/Danish_Cookies/etc/",
@@ -226,7 +204,7 @@
   
 
   
-      ,"page11": {
+      ,"page9": {
           "title": "Team Roles",
           "content": ". Tri 1 . Name Role Grad Year Github ID . Mati | Scrum Master | 2024 | hsinaDitaM | . Qais | Scrum Master | 2025 | Qaisj1 | . Vyaan | Frontend | 2025 | vyaang11 | . Nikhil | Backend | 2029 | nikhailc | - | . .",
           "url": "https://hsinaditam.github.io/Danish_Cookies/tr/",
@@ -246,7 +224,7 @@
   
 
   
-      ,"page15": {
+      ,"page13": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://hsinaditam.github.io/Danish_Cookies/robots.txt",
