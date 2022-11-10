@@ -72,12 +72,51 @@ window.onload = wrap_img;
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <div class="home"><html>
-    <table>
-        <td>Danish_Cookies</td>
-        <td><a href="https://hsinaditam.github.io/Danish_Cookies/about/"></a>About</td>
-        <td><a href="https://hsinaditam.github.io/Danish_Cookies/tr/">Team</a></td>
-        <td><a href="https://hsinaditam.github.io/Danish_Cookies/API">API</a></td>
+
+    <table id="time-table">
     </table>
+    
+    <script>
+    
+    (function() {
+        // fetch
+        let url = "https://mvqn.nighthawkcodingteams.cf/api/clock/";
+    
+        let table = document.getElementById("time-table");
+    
+        // This segment updates the table
+        function updateTable(timezones) {
+            table.innerHTML = "";
+            let placeTitleColumn = document.createElement("tr");
+            let timezoneColumn = document.createElement("tr");
+    
+            // This loops through the timezone json and put each timezone name and data into the table
+            for(let country in timezones) {
+                for(let place in timezones[country]) {
+                    let placeTitle = document.createElement("td");
+                    placeTitle.innerText = `${country} ${place}`;
+                    placeTitleColumn.appendChild(placeTitle);
+                    let timezone = document.createElement("td");
+                    timezone.innerText = timezones[country][place];
+                    timezoneColumn.appendChild(timezone);
+                }
+            }
+            // puts the data on the table
+            table.appendChild(placeTitleColumn);
+            table.appendChild(timezoneColumn);
+        }
+        //fetches the code from the backend to the frontend
+        function getTime() {
+            fetch(url).then(d => d.json()).then(d => {
+                console.table(d);
+                updateTable(d);
+            });
+        }
+        //updates the the table every 1 second
+        setInterval(getTime, 1000);
+    })();
+    
+    </script>
     <head style="text-align: center;">
     </head>
     <body style="text-align: center;"> 
