@@ -1,0 +1,52 @@
+---
+layout: page
+permalink: /clocks/
+title: clocks
+search_exclude: false
+---
+
+<h1>Clocks</h1>
+
+<table id="time-table">
+</table>
+
+<script>
+
+(function() {
+    // fetch
+    let url = "https://mvqn.nighthawkcodingteams.cf/api/clock/";
+
+    let table = document.getElementById("time-table");
+
+    function updateTable(timezones) {
+        table.innerHTML = "";
+        let placeTitleColumn = document.createElement("tr");
+        let timezoneColumn = document.createElement("tr");
+
+        for(let country in timezones) {
+            for(let place in timezones[country]) {
+                let placeTitle = document.createElement("td");
+                placeTitle.innerText = `${country} ${place}`;
+                placeTitleColumn.appendChild(placeTitle);
+
+                let timezone = document.createElement("td");
+                timezone.innerText = timezones[country][place];
+                timezoneColumn.appendChild(timezone);
+            }
+        }
+
+        table.appendChild(placeTitleColumn);
+        table.appendChild(timezoneColumn);
+    }
+
+    function getTime() {
+        fetch(url).then(d => d.json()).then(d => {
+            console.table(d);
+            updateTable(d);
+        });
+    }
+
+    setInterval(getTime, 1000);
+})();
+
+</script>
