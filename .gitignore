@@ -14,6 +14,9 @@ _pages/Am-Lit.md
 _pages/Physics.md
 _pages/js table.html
 
+# Mac finder files
+.DS_Store
+
 *.swp
 ~*
 *~
