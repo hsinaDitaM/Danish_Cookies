@@ -4,20 +4,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Danish Cookies | Mati Danish’s blog</title>
+<title>Page 2 of 2 for Danish Cookies | Mati Danish’s blog</title>
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Danish Cookies" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Mati Danish’s blog" />
 <meta property="og:description" content="Mati Danish’s blog" />
-<link rel="canonical" href="https://hsinaditam.github.io/Danish_Cookies/404.html" />
-<meta property="og:url" content="https://hsinaditam.github.io/Danish_Cookies/404.html" />
+<link rel="canonical" href="https://hsinaditam.github.io/Danish_Cookies/page2/" />
+<meta property="og:url" content="https://hsinaditam.github.io/Danish_Cookies/page2/" />
 <meta property="og:site_name" content="Danish Cookies" />
+<meta property="og:image" content="https://hsinaditam.github.io/Danish_Cookies/images/logo.png" />
 <meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
+<link rel="prev" href="https://hsinaditam.github.io/Danish_Cookies/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://hsinaditam.github.io/Danish_Cookies/images/logo.png" />
 <meta property="twitter:title" content="Danish Cookies" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Mati Danish’s blog","headline":"Danish Cookies","url":"https://hsinaditam.github.io/Danish_Cookies/404.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Mati Danish’s blog","headline":"Danish Cookies","image":"https://hsinaditam.github.io/Danish_Cookies/images/logo.png","url":"https://hsinaditam.github.io/Danish_Cookies/page2/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/Danish_Cookies/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://hsinaditam.github.io/Danish_Cookies/feed.xml" title="Danish Cookies" /><link rel="shortcut icon" type="image/x-icon" href="/Danish_Cookies/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -69,26 +72,116 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+        <div class="home"><html>
 
-<div class="container">
-  <h1>404</h1>
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+    <table id="time-table">
+    </table>
+    
+    <script>
+    
+    (function() {
+        // fetch
+        let url = "https://mvqn.nighthawkcodingteams.cf/api/clock/";
+    
+        let table = document.getElementById("time-table");
+    
+        // This segment updates the table
+        function updateTable(timezones) {
+            table.innerHTML = "";
+            let placeTitleColumn = document.createElement("tr");
+            let timezoneColumn = document.createElement("tr");
+    
+            // This loops through the timezone json and put each timezone name and data into the table
+            for(let country in timezones) {
+                for(let place in timezones[country]) {
+                    let placeTitle = document.createElement("td");
+                    placeTitle.innerText = `${country} ${place}`;
+                    placeTitleColumn.appendChild(placeTitle);
+                    let timezone = document.createElement("td");
+                    timezone.innerText = timezones[country][place];
+                    timezoneColumn.appendChild(timezone);
+                }
+            }
+            // puts the data on the table
+            table.appendChild(placeTitleColumn);
+            table.appendChild(timezoneColumn);
+        }
+        //fetches the code from the backend to the frontend
+        function getTime() {
+            fetch(url).then(d => d.json()).then(d => {
+                console.table(d);
+                updateTable(d);
+            });
+        }
+        //updates the the table every 1 second
+        setInterval(getTime, 1000);
+    })();
+    
+    </script>
+    <head style="text-align: center;">
+    </head>
+    <body style="text-align: center;"> 
+        <h1 style="color:rgba(255, 255, 255, 0.49);">Mati Danish's Blog Post.</h1>
+        <img src="https://c.tenor.com/pMhSj9NfCXsAAAAd/saul-goodman-better-call-saul.gif" />
+        <br />
+        <audio autoplay="" src="https://cdn.discordapp.com/attachments/749785363215679638/1016933418954674236/Saul_goodman_3d-gDjMZvYWUdo.mp3"></audio>
+        <hr />
+        <br />
+        <button class="button" onclick="window.location.href='https://hsinaditam.github.io/Danish_Cookies/schedule/';">Schedule</button>
+        <br />
+        <button class="button" onclick="window.location.href='https://hsinaditam.github.io/Danish_Cookies/afa/';">Advanced Functional Analysis</button>
+        <button class="button" onclick="window.location.href='https://hsinaditam.github.io/Danish_Cookies/3d/';">3D Animation</button>
+        <button class="button" onclick="window.location.href='https://hsinaditam.github.io/Danish_Cookies/physics/';">physics</button>
+        <button class="button" onclick="window.location.href='https://hsinaditam.github.io/Danish_Cookies/amlit/';">American Literature</button>
+        <hr />
+        <h3 style="color:rgba(255, 255, 255, 0.49);"> All APCSP blog posts ↓ </h3> 
+    </body>
+</html>
 
+
+
+
+  
+
+  <!-- Hide posts if front matter flag hide:true -->
+  
+  
+
+  <!-- Sort posts by rank, then date -->
+  
+  
+  
+
+ 
+  
+
+   <!-- Assemble final sorted posts array -->
+  
+  <ul class="post-list"><li><h3>
+    <a class="post-link" href="/Danish_Cookies/frontend/binary">
+    Binary Math
+    </a>
+</h3><p class="post-meta-description">A Binary Math illustrative application using HTML, Liquid, and JavaScript.</p><p class="post-meta">Jul 7, 2022</p>
+</li><li><h3>
+    <a class="post-link" href="/Danish_Cookies/frontend/binary">
+    Binary Math
+    </a>
+</h3><p class="post-meta-description">A Binary Math illustrative application using HTML, Liquid, and JavaScript.</p><p class="post-meta">Jul 7, 2022</p>
+</li><li><h3>
+    <a class="post-link" href="/Danish_Cookies/jupyter/wk1/2020/02/20/test.html">
+    Fastpages Notebook Blog Post
+    </a>
+</h3><p class="post-meta-description">A tutorial of fastpages for Jupyter notebooks.</p><p class="post-meta">Feb 20, 2020</p>
+</li></ul>
+
+    
+      <div class="pager">
+        <ul class="pagination">
+          <li><a href="/Danish_Cookies/" class="previous-page">1</a></li>
+          <li><div class="current-page">2</div></li>
+          <li><div class="pager-edge">•</div></li>
+        </ul>
+      </div></div>
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/Danish_Cookies/"></data>
