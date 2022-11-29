@@ -1,0 +1,41 @@
+---
+toc: true
+comments: false
+layout: post
+title: Team 1 Hacks 
+permalink: /t1hack
+categories: [tri2, wk1]
+---
+
+
+### Questions:
+- In your **own** words, briefly explain by writing down what an assignment operator is
+    - An assignment operator are symbols that define what an variable equals to. in other words it is like math's addition, subtraction, multiply, division
+- In Collegeboard pseudocode, what symbol is used to assign values to variables?
+    - the symble that is used to assign values to varible is the arrow pointing to the left symbol (<-)
+- A variable, x, is initially given a value of 15. Later on, the value for x is changed to 22. If you print x, would the command display 15 or 22?
+    - the x varible would print 22.
+
+
+### code:
+num1=input("Input a number. ")
+
+num2=input("Input a number. ")
+
+num3=input("Input a number. ")
+
+add=input("How much would you like to add? ")
+
+<p> numlist =  [int(num1), int(num2), int(num3)</p> 
+
+for i in numlist:
+    numlist[i -1] += int(add)
+
+print(numlist)
+
+### Quiz:
+![Quiz](/Danish_Cookies/images/QuizSS.png)
+
+### List
+![List](/Danish_Cookies/images/ListSS.png)
+
