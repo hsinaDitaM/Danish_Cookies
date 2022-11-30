@@ -12,7 +12,7 @@ categories: [tri2, wk1]
 - In your **own** words, briefly explain by writing down what an assignment operator is
     - An assignment operator are symbols that define what an variable equals to. in other words it is like math's addition, subtraction, multiply, division
 - In Collegeboard pseudocode, what symbol is used to assign values to variables?
-    - the symble that is used to assign values to varible is the arrow pointing to the left symbol (<-)
+    - the symbole that is used to assign values to varible is the arrow pointing to the left symbol (<-)
 - A variable, x, is initially given a value of 15. Later on, the value for x is changed to 22. If you print x, would the command display 15 or 22?
     - the x varible would print 22.
 
