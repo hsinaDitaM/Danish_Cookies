@@ -8,4 +8,4 @@ permalink: /TM
 categories: [hacks] 
 ---
 
-[lifhgs](/Danish_Cookies/images/TeamManifesto.png)
+![lifhgs](/Danish_Cookies/images/TeamManifesto.png)
