@@ -12,8 +12,8 @@ categories: [hacks]
 | Reporting category | Student Score | College Board scoring| Comments             |
 |--------------------|---------------|----------------------|----------------------|
 | Programing Purpose |1              |0                     |      shows a program that works very well             |
-| Data Abstraction   |1              |1                     |    The list has various ways to filter the triangles                  |
-| Managing Complexity|1              |0                     |    The list doesn’t show what he is doing.                  |
+| Data Abstraction   |1              |1                     |     list has various ways to filter the triangles                  |
+| Managing Complexity|1              |0                     |    it doesn’t show what he is doing.                  |
 |Procedural Abstraction|1            |1                     |     The list doesn’t show what he is doing.                 |
 |Algorithm Implementation|1          |1                     |   His written response was detailed and showed what he needed.                   |
 |Testing             |1              |1                     |  His response shows that he met the conditions in the requirements.                    |
