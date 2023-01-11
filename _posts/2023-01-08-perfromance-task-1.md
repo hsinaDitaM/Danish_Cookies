@@ -9,6 +9,7 @@ categories: [hacks]
 ---
 
 # submission 1
+
 | Reporting category | Student Score | College Board scoring| Comments             |
 |--------------------|---------------|----------------------|----------------------|
 | Programing Purpose |1              |0                     |      shows a program that works very well             |
@@ -19,6 +20,7 @@ categories: [hacks]
 |Testing             |1              |1                     |  His response shows that he met the conditions in the requirements.                    |
 
 # Submission 2
+
 | Reporting Category | Student Score | College Board Score | Comments |
 | - | - | - | - |
 | Row 1: Program Purpose and Function | 1 | 1 | The video shows that the program runs well. |
