@@ -4,7 +4,7 @@ comments: false
 layout: post
 title: MCQ#2 Test Correction
 description: 
-permalink: /MCQ#2
+permalink: /MCQ2
 categories: [blogs] 
 ---
 
