@@ -4,7 +4,7 @@ comments: false
 layout: post
 title: Computer Bias
 description: CB  5.53 Computer Bias
-permalink: /pp
+permalink: /Comp_bias
 categories: [collegeboard, blog] 
 ---
 
