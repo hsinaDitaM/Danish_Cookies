@@ -48,3 +48,15 @@ We have all participated in code Crowdsourcing by using GitHub. Many of you have
 
 Kaggle datasets for code and science exploration. The avenue of data points us youtube or netflix channels. Analyzing crowd data helps us make decisions. Exam top 10 to 20. Did you see anything interesting?
 - no i did not see anything interesting in the code. 
+
+
+# Hacks for 5.4
+CompSci has 150 ish principles students. Describe a crowdsource idea and how you might initiate it in our environment?
+- a crowdsource idea that i have is to ask all of the compsci students to write  lines of a code for a program. This will make sure that sure that students can contribute equally and show off thier coding skills.
+What about Del Norte crowdsourcing? Could your project be better with crowdsourcing?
+- well, not everyone in Del Norte knows how to code so what we can do is to rank all of the classes in del norte without any bias that might affect the outcome the result of the crowdsoucing. 
+What kind of data could you capture at N@tM to make evening interesting? Perhaps use this data to impress Teachers during finals week.
+- a type of data to capture is the students class that they are attending it for. this could impress some teachers and make others sad or disappointed in their students. 
+
+# Hacks for 5.3
+My thoughts on HP's testing fail is that gathering people to experiment their device can be hard. they need to pay for each of the testers for their time. they also have to avoid too much test people as not 'leak' their new technology to the world and spoil the awe in its release. There are also backlashes that you can recive if you dont do much testing and releasing the new technology to the public, which HP faced with their face tracking webcame. 
