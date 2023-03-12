@@ -1,0 +1,84 @@
+{
+    "houses": [
+        {
+            "id": 1,
+            "location": "Los Angeles",
+            "bedrooms": 3,
+            "bathrooms": 2,
+            "square_feet": 1800,
+            "price": 950000
+        },
+        {
+            "id": 2,
+            "location": "San Francisco",
+            "bedrooms": 2,
+            "bathrooms": 1,
+            "square_feet": 1200,
+            "price": 1200000
+        },
+        {
+            "id": 3,
+            "location": "New York City",
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "square_feet": 2500,
+            "price": 1800000
+        },
+        {
+            "id": 4,
+            "location": "Chicago",
+            "bedrooms": 3,
+            "bathrooms": 2,
+            "square_feet": 2000,
+            "price": 700000
+        },
+        {
+            "id": 5,
+            "location": "Seattle",
+            "bedrooms": 5,
+            "bathrooms": 3,
+            "square_feet": 3000,
+            "price": 2200000
+        },
+        {
+            "id": 6,
+            "location": "Boston",
+            "bedrooms": 2,
+            "bathrooms": 1,
+            "square_feet": 1000,
+            "price": 750000
+        },
+        {
+            "id": 7,
+            "location": "Austin",
+            "bedrooms": 4,
+            "bathrooms": 2,
+            "square_feet": 2200,
+            "price": 900000
+        },
+        {
+            "id": 8,
+            "location": "Denver",
+            "bedrooms": 3,
+            "bathrooms": 2,
+            "square_feet": 1900,
+            "price": 650000
+        },
+        {
+            "id": 9,
+            "location": "Miami",
+            "bedrooms": 2,
+            "bathrooms": 1,
+            "square_feet": 1100,
+            "price": 550000
+        },
+        {
+            "id": 10,
+            "location": "Portland",
+            "bedrooms": 4,
+            "bathrooms": 2,
+            "square_feet": 2400,
+            "price": 1100000
+        }
+    ]
+}
