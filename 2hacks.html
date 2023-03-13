@@ -144,7 +144,15 @@ window.onload = wrap_img;
 </ul>
 </li>
 <li class="toc-entry toc-h1"><a href="#in-blog-add-college-board-practice-problems-for-23">In blog add College Board practice problems for 2.3.</a></li>
-<li class="toc-entry toc-h1"><a href="#create-or-find-your-own-dataset">Create or Find your own dataset.</a></li>
+<li class="toc-entry toc-h1"><a href="#create-or-find-your-own-dataset">Create or Find your own dataset.</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#dataframe">dataframe:</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#output-tested-in-a-seprate-py-file">output (tested in a seprate .py file):</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul><h1 id="22-hacks">
 <a class="anchor" href="#22-hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.2 hacks</h1>
 
@@ -538,6 +546,30 @@ this is because the picture does not have varying shades of color and therefore 
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre></div></div>
+
+<h2 id="dataframe">
+<a class="anchor" href="#dataframe" aria-hidden="true"><span class="octicon octicon-link"></span></a>dataframe:</h2>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+
+<span class="c1"># Load the JSON data into a DataFrame
+</span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">housing_data</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"-----Most cheapest houses in the united states------"</span><span class="p">)</span>
+<span class="n">df_sorted</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s">'price'</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">df_sorted</span><span class="p">)</span>
+</code></pre></div></div>
+<h3 id="output-tested-in-a-seprate-py-file">
+<a class="anchor" href="#output-tested-in-a-seprate-py-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>output (tested in a seprate .py file):</h3>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="n">house_id</span>  <span class="n">num_bedrooms</span>  <span class="n">num_bathrooms</span>  <span class="n">square_feet</span>  <span class="n">garage_capacity</span>  <span class="n">year_built</span>  <span class="n">sale_price</span>
+<span class="mi">0</span>         <span class="mi">1</span>             <span class="mi">3</span>              <span class="mi">2</span>         <span class="mi">1500</span>                <span class="mi">2</span>        <span class="mi">2000</span>      <span class="mi">250000</span>
+<span class="mi">1</span>         <span class="mi">2</span>             <span class="mi">4</span>              <span class="mi">3</span>         <span class="mi">2500</span>                <span class="mi">3</span>        <span class="mi">2010</span>      <span class="mi">500000</span>
+<span class="mi">2</span>         <span class="mi">3</span>             <span class="mi">2</span>              <span class="mi">1</span>         <span class="mi">1000</span>                <span class="mi">1</span>        <span class="mi">1995</span>      <span class="mi">150000</span>
+<span class="mi">3</span>         <span class="mi">4</span>             <span class="mi">3</span>              <span class="mi">2</span>         <span class="mi">1800</span>                <span class="mi">2</span>        <span class="mi">2005</span>      <span class="mi">300000</span>
+<span class="mi">4</span>         <span class="mi">5</span>             <span class="mi">2</span>              <span class="mi">1</span>          <span class="mi">900</span>                <span class="mi">1</span>        <span class="mi">1980</span>      <span class="mi">125000</span>
+</code></pre></div></div>
 
   </div><a class="u-url" href="/Danish_Cookies/2hacks" hidden></a>
 </article>
