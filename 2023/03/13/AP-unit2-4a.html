@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      8 min read
+      7 min read
     
 </span></p>
 
@@ -213,7 +213,7 @@ window.onload = wrap_img;
 <span class="c1"># Setup of key Flask object (app)</span>
 <span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 <span class="c1"># Setup SQLAlchemy object and properties for the database (db)</span>
-<span class="n">database</span> <span class="o">=</span> <span class="s1">'sqlite:///files/sqlite.db'</span>  <span class="c1"># path and filename of database</span>
+<span class="n">database</span> <span class="o">=</span> <span class="s1">'sqlite:///sqlite.db'</span>  <span class="c1"># path and filename of database</span>
 <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">'SQLALCHEMY_TRACK_MODIFICATIONS'</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">'SQLALCHEMY_DATABASE_URI'</span><span class="p">]</span> <span class="o">=</span> <span class="n">database</span>
 <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">'SECRET_KEY'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'SECRET_KEY'</span>
@@ -471,7 +471,7 @@ window.onload = wrap_img;
                 <span class="sd">'''fails with bad or duplicate data'''</span>
                 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Records exist uid </span><span class="si">{</span><span class="n">user</span><span class="o">.</span><span class="n">uid</span><span class="si">}</span><span class="s2">, or error."</span><span class="p">)</span>
                 
-<span class="n">initUsers</span><span class="p">()</span>
+<span class="n">initUsers</span><span class="p">()</span> 
 </pre></div>
 
     </div>
@@ -631,7 +631,7 @@ Created new uid raven
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Created
- {'id': 7, 'name': 'Mati', 'uid': '1932748', 'dob': '05-30-2006', 'age': 16}
+ {'id': 7, 'name': 'mati', 'uid': '1932748', 'dob': '05-30-2006', 'age': 16}
 </pre>
 </div>
 </div>
@@ -680,52 +680,6 @@ Created new uid raven
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[{'id': 1,
-  'name': 'Thomas Edison',
-  'uid': 'toby',
-  'dob': '02-11-1847',
-  'age': 176},
- {'id': 2,
-  'name': 'Nikola Tesla',
-  'uid': 'niko',
-  'dob': '03-14-2023',
-  'age': 0},
- {'id': 3,
-  'name': 'Alexander Graham Bell',
-  'uid': 'lex',
-  'dob': '03-14-2023',
-  'age': 0},
- {'id': 4,
-  'name': 'Eli Whitney',
-  'uid': 'whit',
-  'dob': '03-14-2023',
-  'age': 0},
- {'id': 5,
-  'name': 'Indiana Jones',
-  'uid': 'indi',
-  'dob': '10-21-1920',
-  'age': 102},
- {'id': 6,
-  'name': 'Marion Ravenwood',
-  'uid': 'raven',
-  'dob': '10-21-1921',
-  'age': 101},
- {'id': 7, 'name': 'Mati', 'uid': '1932748', 'dob': '05-30-2006', 'age': 16}]</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
