@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      12 min read
     
 </span></p>
 
@@ -139,6 +139,23 @@ window.onload = wrap_img;
 </li>
 </ul>
 </li>
+<li class="toc-entry toc-h1"><a href="#hacks">Hacks</a></li>
+<li class="toc-entry toc-h1"><a href="#hacks-1">Hacks</a></li>
+<li class="toc-entry toc-h1"><a href="#q--a">Q &amp; A</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#1">1</a></li>
+<li class="toc-entry toc-h2"><a href="#2">2</a></li>
+<li class="toc-entry toc-h2"><a href="#3">3</a></li>
+<li class="toc-entry toc-h2"><a href="#4">4</a></li>
+<li class="toc-entry toc-h2"><a href="#5">5</a></li>
+<li class="toc-entry toc-h2"><a href="#6">6</a></li>
+<li class="toc-entry toc-h2"><a href="#7">7</a></li>
+<li class="toc-entry toc-h2"><a href="#8">8</a></li>
+<li class="toc-entry toc-h2"><a href="#9">9</a></li>
+<li class="toc-entry toc-h2"><a href="#10">10</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#big-idea-2">big idea 2</a></li>
 </ul><h1 id="space-and-time-complexity">
 <a class="anchor" href="#space-and-time-complexity" aria-hidden="true"><span class="octicon octicon-link"></span></a>Space and Time Complexity</h1>
 <blockquote>
@@ -257,6 +274,277 @@ window.onload = wrap_img;
     <li>Based on what is known about the other time complexities, hypothesize the resulting elapsed time if the function is replaced.</li>
   </ul>
 </blockquote>
+
+<h1 id="hacks">
+<a class="anchor" href="#hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks</h1>
+<h1 id="hacks-1">
+<a class="anchor" href="#hacks-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks</h1>
+<ul>
+  <li>Record your findings when testing the time elapsed of the different algorithms.
+    <ul>
+      <li>The time complexity is often expressed in big O notation, which gives an upper bound on the number of operations required as the input size grows. A lower time complexity is generally better, as it means the algorithm or operation is more efficient.</li>
+      <li>The space complexity is also often expressed in big O notation, and a lower space complexity is generally better.</li>
+      <li>Arrays have a constant time complexity for accessing an element by index (O(1)), but a linear time complexity for searching or inserting an element in an unsorted array (O(n)).</li>
+      <li>Linked lists have a constant time complexity for inserting or deleting an element at the beginning of the list (O(1)), but a linear time complexity for accessing or searching for an element in the list (O(n)).</li>
+      <li>The space complexity of a linked list is also proportional to the number of elements it contains (O(n)).</li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+
+<ul>
+  <li>Although we will go more in depth later, time complexity is a key concept that relates to the different sorting algorithms. Do some basic research on the different types of sorting algorithms and their time complexity.
+    <ol>
+      <li>Bubble Sort:
+        <ul>
+          <li>Time complexity: O(n^2)</li>
+          <li>Space complexity: O(1)</li>
+          <li>Bubble sort is a simple sorting algorithm that repeatedly swaps adjacent elements if they are in the wrong order. It has a time complexity of O(n^2), making it inefficient for large datasets.</li>
+        </ul>
+      </li>
+      <li>Selection Sort:
+        <ul>
+          <li>Time complexity: O(n^2)</li>
+          <li>Space complexity: O(1)</li>
+          <li>Selection sort repeatedly finds the minimum element in an unsorted array and swaps it with the first element. It also has a time complexity of O(n^2).</li>
+        </ul>
+      </li>
+      <li>Insertion Sort:
+        <ul>
+          <li>Time complexity: O(n^2) for worst and average case, O(n) for best case.</li>
+          <li>Space complexity: O(1)</li>
+          <li>Insertion sort is a simple sorting algorithm that builds the final sorted array one item at a time. It has an average and worst-case time complexity of O(n^2), but a best-case time complexity of O(n) when the input array is already sorted.</li>
+        </ul>
+      </li>
+      <li>
+        <p>Merge Sort:
+      - Time complexity: O(n log n)
+      - Space complexity: O(n)
+      - Merge sort is a divide and conquer algorithm that recursively divides the input array in half, sorts each half, and then merges them back together. It has a time complexity of O(n log n), making it more efficient than the previous three algorithms for large datasets.</p>
+      </li>
+      <li>Quick Sort:
+        <ul>
+          <li>Time complexity: O(n log n) for average case, O(n^2) for worst case.</li>
+          <li>Space complexity: O(log n) for average case, O(n) for worst case.</li>
+          <li>Quick sort is another divide and conquer algorithm that selects a pivot element, partitions the array around the pivot, and recursively sorts the two partitions. It has an average-case time    complexity of O(n log n), but a worst-case time complexity of O(n^2) when the input array is already sorted or mostly sorted.</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<hr>
+
+<ul>
+  <li>
+    <p>Why is time and space complexity important when choosing an algorithm?</p>
+
+    <ul>
+      <li>Time and space complexity are important considerations when choosing an algorithm because they directly impact the performance and efficiency of the algorithm.</li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+
+<ul>
+  <li>Should you always use a constant time algorithm / Should you never use an exponential time algorithm? Explain?
+    <ul>
+      <li>No, the choice of algorithm depends on the specific use case and requirements. Constant time algorithms are preferred for small input sizes and high performance requirements, while linear or even exponential time algorithms may be necessary for larger input sizes. Exponential time algorithms should generally be avoided due to their extremely slow performance for larger input sizes, but there may be certain use cases where they are the only viable option. Ultimately, it’s important to consider both time and space complexity when choosing an algorithm, as they directly impact the performance and efficiency of the algorithm. The goal is to choose the algorithm that provides the best balance of performance and efficiency for the specific use case and input data.</li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+
+<ul>
+  <li>What are some general patterns that you noticed to determine each algorithm’s time and space complexity?
+    <ul>
+      <li>Looping</li>
+      <li>Recursion</li>
+      <li>Nested loops</li>
+      <li>Divide and conquer</li>
+      <li>Sorting</li>
+      <li>Data structure</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Complete the Time and Space Complexity analysis questions linked below.
+<a href="https://www.geeksforgeeks.org/practice-questions-time-complexity-analysis/">Practice</a></p>
+<h1 id="q--a">
+<a class="anchor" href="#q--a" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q &amp; A</h1>
+
+<h2 id="1">
+<a class="anchor" href="#1" aria-hidden="true"><span class="octicon octicon-link"></span></a>1</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nb">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">N</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">rand</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">M</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span> <span class="n">rand</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ol>
+  <li>O(N * M) time, O(1) space</li>
+  <li>
+    <p>O(N + M) time, O(N + M) space</p>
+  </li>
+  <li>
+    <p><mark>O(N + M) time, O(1) space<mark></mark></mark></p>
+  </li>
+  <li>O(N * M) time, O(N + M) space</li>
+</ol>
+
+<p>the correct answer is #3, N and M are independent variables</p>
+
+<h2 id="2">
+<a class="anchor" href="#2" aria-hidden="true"><span class="octicon octicon-link"></span></a>2</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nb">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">N</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="n">N</span><span class="p">;</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="n">j</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ol>
+  <li>O(N)</li>
+  <li>O(N*log(N))</li>
+  <li>O(N * Sqrt(N))</li>
+  <li><mark> O(N*N) </mark></li>
+</ol>
+
+<p>the code above does not run</p>
+
+<h2 id="3">
+<a class="anchor" href="#3" aria-hidden="true"><span class="octicon octicon-link"></span></a>3</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nb">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="n">n</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span> <span class="o">=</span> <span class="n">j</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="n">n</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ol>
+  <li>O(n)</li>
+  <li><mark> O(N log N) </mark></li>
+  <li>O(n^2)</li>
+  <li>O(n^2Logn)</li>
+</ol>
+
+<p>j keeps doubling but it is still less than one</p>
+<h2 id="4">
+<a class="anchor" href="#4" aria-hidden="true"><span class="octicon octicon-link"></span></a>4</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">What</span> <span class="n">does</span> <span class="n">it</span> <span class="n">mean</span> <span class="n">when</span> <span class="n">we</span> <span class="n">say</span> <span class="n">that</span> <span class="n">an</span> <span class="n">algorithm</span> <span class="n">X</span> <span class="ow">is</span> <span class="n">asymptotically</span> <span class="n">more</span> <span class="n">efficient</span> <span class="n">than</span> <span class="n">Y</span><span class="err">?</span> 
+</code></pre></div></div>
+
+<ol>
+  <li>X will always be a better choice for small inputs</li>
+  <li><mark> X will always be a better choice for large inputs </mark></li>
+  <li>Y will always be a better choice for small inputs</li>
+  <li>X will always be a better choice for all inputs</li>
+</ol>
+
+<p>Asymptotic analysis compares algorithms based on their performance as input size approaches infinity</p>
+
+<h2 id="5">
+<a class="anchor" href="#5" aria-hidden="true"><span class="octicon octicon-link"></span></a>5</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span> <span class="o">=</span> <span class="n">N</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">a</span> <span class="o">+=</span> <span class="n">i</span><span class="p">;</span>
+    <span class="n">i</span> <span class="o">/=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<ol>
+  <li>O(N)</li>
+  <li>O(Sqrt(N))</li>
+  <li>O(N / 2)</li>
+  <li><mark> O(log N) </mark></li>
+</ol>
+
+<p>We have to find the smallest x such that ‘(N / 2^x )&lt; 1 OR  2^x &gt; N’ 
+x = log(N)</p>
+
+<h2 id="6">
+<a class="anchor" href="#6" aria-hidden="true"><span class="octicon octicon-link"></span></a>6</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Which</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">best</span> <span class="n">describes</span> <span class="n">the</span> <span class="n">useful</span> <span class="n">criterion</span> <span class="k">for</span> <span class="n">comparing</span> <span class="n">the</span> <span class="n">efficiency</span> <span class="n">of</span> <span class="n">algorithms</span><span class="err">?</span>
+</code></pre></div></div>
+
+<ol>
+  <li>Time</li>
+  <li>Memory</li>
+  <li><mark> Both of the above </mark></li>
+  <li>None of the above</li>
+</ol>
+
+<p>common sense</p>
+
+<h2 id="7">
+<a class="anchor" href="#7" aria-hidden="true"><span class="octicon octicon-link"></span></a>7</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">How</span> <span class="ow">is</span> <span class="n">time</span> <span class="n">complexity</span> <span class="n">measured</span><span class="err">?</span>
+</code></pre></div></div>
+<ol>
+  <li>By counting the number of algorithms in an algorithm.</li>
+  <li><mark> By counting the number of primitive operations performed by the algorithm on a given input size. </mark></li>
+  <li>By counting the size of data input to the algorithm.</li>
+  <li>None of the above</li>
+</ol>
+
+<h2 id="8">
+<a class="anchor" href="#8" aria-hidden="true"><span class="octicon octicon-link"></span></a>8</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span><span class="p">(</span><span class="n">var</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="n">i</span><span class="o">*=</span><span class="n">k</span>
+</code></pre></div></div>
+<ol>
+  <li>O(n)</li>
+  <li>O(k)</li>
+  <li><mark> O(logkn) </mark></li>
+  <li>O(lognk)</li>
+</ol>
+
+<p>Because loops for the kn-1 times, so after taking log it becomes logkn.</p>
+
+<h2 id="9">
+<a class="anchor" href="#9" aria-hidden="true"><span class="octicon octicon-link"></span></a>9</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">int</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="nb">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="k">for</span><span class="p">(</span><span class="nb">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">i</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+      <span class="n">value</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+</code></pre></div></div>
+
+<ol>
+  <li>n</li>
+  <li>(n+1)</li>
+  <li><mark> n(n-1) </mark></li>
+  <li>n(n+1)</li>
+</ol>
+
+<p>First for loop will run for (n) times and another for loop will be run for (n-1) times as the inner loop will only run till the range i which is 1 less than n , so overall time will be n(n-1).</p>
+
+<h2 id="10">
+<a class="anchor" href="#10" aria-hidden="true"><span class="octicon octicon-link"></span></a>10</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Algorithm</span> <span class="n">A</span> <span class="ow">and</span> <span class="n">B</span> <span class="n">have</span> <span class="n">a</span> <span class="n">worst</span><span class="o">-</span><span class="n">case</span> <span class="n">running</span> <span class="n">time</span> <span class="n">of</span> <span class="n">O</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="ow">and</span> <span class="n">O</span><span class="p">(</span><span class="n">logn</span><span class="p">),</span> <span class="n">respectively</span><span class="p">.</span> <span class="n">Therefore</span><span class="p">,</span> <span class="n">algorithm</span> <span class="n">B</span> <span class="n">always</span> <span class="n">runs</span> <span class="n">faster</span> <span class="n">than</span> <span class="n">algorithm</span> <span class="n">A</span><span class="p">.</span>
+</code></pre></div></div>
+
+<ol>
+  <li>True</li>
+  <li><mark> False </mark></li>
+</ol>
+
+<p>The Big-O notation provides an asymptotic comparison in the running time of algorithms. For n &lt; n0​​, algorithm A might run faster than algorithm B, for instance.</p>
+
+<h1 id="big-idea-2">
+<a class="anchor" href="#big-idea-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>big idea 2</h1>
+<p>note: need vpn to view these images on school wifi. 
+<img src="https://media.discordapp.net/attachments/914072417310232616/1087593110370013244/bigidea2.png?width=1683&amp;height=187" alt="image"></p>
 
   </div><a class="u-url" href="/Danish_Cookies/STCN" hidden></a>
 </article>
