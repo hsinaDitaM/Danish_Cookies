@@ -18,27 +18,27 @@ categories: [blog, lesson, notes]
 - cal state opened more oppturnities for her
 
 
- ## john
- - started at polarmor collage
- - stayed there for three years
- - persued computer science degree
+# john
+- started at polarmor collage
+- stayed there for three years
+- pursued computer science degree
 - he graduated
 - impressive school
 - took 16 months to get her degree
-- persueing computer science is versitile
+- perusing computer science is versatile
 - using computer science is essential and used for all majors
 
-
+# about san marcos
 - san marcos is a newer school
 - new engineering building
 - they have new stuff every year for engineering
-- favorite facciliy is the highest turn over
+- favorite facility is the highest turn over
 - common to see people in san marcos
 - there is so many local industries in san diego
     - qualcomm and other 
-- 250 stairs in san marcois
+- 250 stairs in san marco
     - very nice legs
-- chem, bio chem, applied physics, minor eletronics, biological scientisest, master at cyber security, and then computer enginerringh starting at fall
+- chem, bio chem, applied physics, minor electronics, biological scientists, master at cyber security, and then computer engineering starting at fall
 - smaller campus = more room for change
 - you can change from computer science to computer engineering easily
 - a lot of option in math too
@@ -49,13 +49,13 @@ categories: [blog, lesson, notes]
 - Chem and bio chem
 - Bio tech
 - math
-- Computer schoene
-- softwqare enginerr
-- electricla enginerring
+- Computer science
+- software engineer
+- electrical engineering
 
 
 # clubs
-- cybersec club
+- cybersecurity club
 - robotics
 - 3d printing
 - women in stem
@@ -118,3 +118,6 @@ categories: [blog, lesson, notes]
  - if you work somewhere, you could be paid for it
  - if you go for phd, dont pay a dime
 
+![image](/Danish_Cookies/images/the-class.jpg)
+
+![image](/Danish_Cookies/images/me.jpg)
