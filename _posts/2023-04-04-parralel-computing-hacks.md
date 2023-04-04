@@ -5,15 +5,19 @@ Badges: true
 comments: true
 author: Mati Danish
 categories: [hacks, markdown]
-title: parallel computing hacks
+title: parralel computing hacks
 ---
 
 
 # Hacks
 > AP Classroom. Provide answers and thoughts on theoritical question form college board Video in section 4.3.  They start at about the 9 minute mark.
+
+
 - Example 1
 
 ![image](https://media.discordapp.net/attachments/914072417310232616/1092179386914054195/CB_EX_1.png?width=2000&height=920)
+
+the answer to this question is 50 seconds because the longest process in the list is 50 seconds. if you add up the other two, you will take 40 seconds. still not enough to beat 50 seconds.
 
 
 
