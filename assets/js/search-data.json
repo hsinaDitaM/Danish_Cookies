@@ -2,8 +2,8 @@
   
     
         "post0": {
-            "title": "parallel computing hacks",
-            "content": "Hacks . AP Classroom. Provide answers and thoughts on theoritical question form college board Video in section 4.3. They start at about the 9 minute mark. . Example 1 | . . Example 2 | . . running both process one after another will take 70 seconds but running them in parallel computing, it could take less than 25 seconds . Data Structures. Build a List Comprehension example . list = [calc(item) for item in items] | . strings = [&quot;apple&quot;, &quot;samsung&quot;, &quot;google&quot;, &quot;pineapple&quot;] string_lengths = [len(string) for string in strings] print(string_lengths) . output: . [5, 7, 6, 9] .",
+            "title": "parralel computing hacks",
+            "content": "Hacks . AP Classroom. Provide answers and thoughts on theoritical question form college board Video in section 4.3. They start at about the 9 minute mark. . Example 1 | . . the answer to this question is 50 seconds because the longest process in the list is 50 seconds. if you add up the other two, you will take 40 seconds. still not enough to beat 50 seconds. . Example 2 | . . running both process one after another will take 70 seconds but running them in parallel computing, it could take less than 25 seconds . Data Structures. Build a List Comprehension example . list = [calc(item) for item in items] | . strings = [&quot;apple&quot;, &quot;samsung&quot;, &quot;google&quot;, &quot;pineapple&quot;] string_lengths = [len(string) for string in strings] print(string_lengths) . output: . [5, 7, 6, 9] .",
             "url": "https://hsinaditam.github.io/Danish_Cookies/hacks/markdown/2023/04/04/parralel-computing-hacks.html",
             "relUrl": "/hacks/markdown/2023/04/04/parralel-computing-hacks.html",
             "date": " • Apr 4, 2023"
