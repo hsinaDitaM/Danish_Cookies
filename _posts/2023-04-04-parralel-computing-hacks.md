@@ -10,7 +10,7 @@ title: parralel computing hacks
 
 
 # Hacks
-> AP Classroom. Provide answers and thoughts on theoritical question form college board Video in section 4.3.  They start at about the 9 minute mark.
+> AP Classroom. Provide answers and thoughts on theoretical question form college board Video in section 4.3.  They start at about the 9 minute mark.
 
 
 - Example 1
