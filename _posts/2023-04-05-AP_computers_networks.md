@@ -84,16 +84,21 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
     - Bandwidth is usually measured in bits per second
 
 - Complete Vocabulary Matching Activity.  Incorporate this into your learnings from year.  To analyze measure path and latency use `traceroute` and `ping` commands from Linux Terminal.  
-    - Path 
-    - Route
-    - Computer System
-    - Computer Device
-    - Bandwidth
-    - Computer Network
+    - Path - the toute that a system takes 
+    - Route - a banch of path
+    - Computer System - a system of devices in a network
+    - Computer Device - your device
+    - Bandwidth - how fast you can transport stuff
+    - Computer Network - what network you are connected to
 
 > Watch/review College Board Daily Video 4.1.2
 
 - Complete True of False Questions
+1. t
+2. f
+3. f
+4. t
+5. t
 
 - Essential Knowledge
     - The internet is a computer network consisting of interconnected networks that use standardized, open (nonproprierary) communication protocols.
