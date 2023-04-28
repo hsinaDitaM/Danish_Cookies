@@ -25,7 +25,7 @@
     
         ,"post2": {
             "title": "MCQ Test 4 Corrections",
-            "content": "5 basic UI elements . Buttons | Text Field | Drop Down List | Check-boxes | Radio Buttons | what sass do? . SASS extends the capabilities of CSS by adding features like variables, mixins, and nesting. | . How does the number guesser game work? . javacript choses a random number | the user gusess | if too high, print say too high | if too low, print too low | if guessed print, yes.. | . Explain how SASS can be used to make the number guesser game look more visually appealing? . SASS can be used to make the number guesser game more visually appealing by allowing developers to create reusable styles using variables and mixins. For example, a color palette could be defined as variables in SASS, allowing for consistent color usage throughout the game. | . Hack 1 . .",
+            "content": "5 basic UI elements . Buttons | Text Field | Drop Down List | Check-boxes | Radio Buttons | what sass do? . SASS extends the capabilities of CSS by adding features like variables, mixins, and nesting. | . How does the number guesser game work? . javacript choses a random number | the user gusess | if too high, print say too high | if too low, print too low | if guessed print, yes.. | . Explain how SASS can be used to make the number guesser game look more visually appealing? . SASS can be used to make the number guesser game more visually appealing by allowing developers to create reusable styles using variables and mixins. For example, a color palette could be defined as variables in SASS, allowing for consistent color usage throughout the game. | . Hack 1 . . Hack 2 . . . https://hsinaditam.github.io/Danish_Cookies/button/ . extra . . .",
             "url": "https://hsinaditam.github.io/Danish_Cookies/fastpages/markdown/2023/04/27/sass-hacks.html",
             "relUrl": "/fastpages/markdown/2023/04/27/sass-hacks.html",
             "date": " • Apr 27, 2023"
@@ -874,9 +874,20 @@
   
 
   
+      ,"page6": {
+          "title": "game",
+          "content": "Guess the Number . Guess the Number . Try to guess the number between 1 and 100. . Submit . .",
+          "url": "https://hsinaditam.github.io/Danish_Cookies/game/",
+          "relUrl": "/game/",
+          "date": ""
+      }
+      
+  
 
   
-      ,"page7": {
+
+  
+      ,"page8": {
           "title": "Other Classes",
           "content": "Unit 1: . All of the equation that is useful in Physics one!’ . toc: false | branch: master | badges: true | comments: true | author: Mati Danish | categories: [fastpages, jupyter] | . warning: unit 1 not finished. More the be added. . x = (delta)x/time .",
           "url": "https://hsinaditam.github.io/Danish_Cookies/etc/",
@@ -897,7 +908,7 @@
   
 
   
-      ,"page12": {
+      ,"page13": {
           "title": "Team Roles",
           "content": ". Tri 1 . Name Role Grad Year Github ID . Mati | Scrum Master | 2024 | hsinaDitaM | . Qais | Scrum Master | 2025 | Qaisj1 | . Vyaan | Frontend | 2025 | vyaang11 | . Nikhil | Backend | 2029 | nikhailc | - | . .",
           "url": "https://hsinaditam.github.io/Danish_Cookies/tr/",
@@ -928,7 +939,7 @@
   
 
   
-      ,"page21": {
+      ,"page22": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://hsinaditam.github.io/Danish_Cookies/robots.txt",
