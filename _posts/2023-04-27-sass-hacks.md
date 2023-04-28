@@ -32,7 +32,22 @@ title: MCQ Test 4 Corrections
 
 # Hack 1
 
-![image](/Danish_Cookies/images/sass1.pngcd )
+![image](/Danish_Cookies/images/sass1.png)
 
 
+# Hack 2
+
+![image](/Danish_Cookies/images/button_0.png)
+
+![image](/Danish_Cookies/images/button_1.png)
+
+
+https://hsinaditam.github.io/Danish_Cookies/button/
+
+
+
+## extra 
+![image](/Danish_Cookies/images/button1_0.png)
+
+![image](/Danish_Cookies/images/button1_1.png)
 
