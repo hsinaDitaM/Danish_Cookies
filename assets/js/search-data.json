@@ -853,6 +853,17 @@
 
   
       ,"page4": {
+          "title": "buttooooooon",
+          "content": "&lt;!DOCTYPE html&gt; . My button for your damn project . Click me .",
+          "url": "https://hsinaditam.github.io/Danish_Cookies/button/",
+          "relUrl": "/button/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page5": {
           "title": "clocks",
           "content": "Clocks .",
           "url": "https://hsinaditam.github.io/Danish_Cookies/clocks/",
@@ -865,7 +876,7 @@
   
 
   
-      ,"page6": {
+      ,"page7": {
           "title": "Other Classes",
           "content": "Unit 1: . All of the equation that is useful in Physics one!’ . toc: false | branch: master | badges: true | comments: true | author: Mati Danish | categories: [fastpages, jupyter] | . warning: unit 1 not finished. More the be added. . x = (delta)x/time .",
           "url": "https://hsinaditam.github.io/Danish_Cookies/etc/",
@@ -886,7 +897,7 @@
   
 
   
-      ,"page11": {
+      ,"page12": {
           "title": "Team Roles",
           "content": ". Tri 1 . Name Role Grad Year Github ID . Mati | Scrum Master | 2024 | hsinaDitaM | . Qais | Scrum Master | 2025 | Qaisj1 | . Vyaan | Frontend | 2025 | vyaang11 | . Nikhil | Backend | 2029 | nikhailc | - | . .",
           "url": "https://hsinaditam.github.io/Danish_Cookies/tr/",
@@ -917,7 +928,7 @@
   
 
   
-      ,"page20": {
+      ,"page21": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://hsinaditam.github.io/Danish_Cookies/robots.txt",
