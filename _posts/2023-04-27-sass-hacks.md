@@ -54,6 +54,7 @@ https://hsinaditam.github.io/Danish_Cookies/button/
 
 
 # hack 3
-https://hsinaditam.github.io/bipbiojybguobgv97--cvy0tf7u7gtf687c8tfg86t/
+
+[https://hsinaditam.github.io/Danish_Cookies/2023/04/27/game.html](https://hsinaditam.github.io/Danish_Cookies/2023/04/27/game.html)
 
 
