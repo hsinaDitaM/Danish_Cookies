@@ -151,6 +151,20 @@ The "network" layer is responsible for ***routing data packets between networks*
 
 - Complete the network activity, summarize your understanding of fault tolerance.
 
+1. Redundancy - This involves duplicating critical components or systems so that if one fails, the backup can take over without interruption.
+
+2. Load balancing - This distributes network traffic evenly across multiple servers to ensure that no single server becomes overloaded and causes a failure.
+
+3. Monitoring and alerts - Regularly monitoring the system and receiving alerts for any anomalies or failures can help to identify and resolve issues before they become serious.
+
+4. Failover - This involves automatically switching to a backup system or component in the event of a failure.
+
+5. Disaster recovery planning - Having a plan in place for recovering from catastrophic events such as power outages, natural disasters, or cyber attacks can help minimize downtime and data loss.
+
+6. Testing and maintenance - Regularly testing and maintaining the system can help to identify and prevent potential failures.
+
+
+
 
 ### Parallel and Distributed Computing
 > Review previous lecture on Parallel Computing and watch Daily vidoe 4.3.  Think of ways to make something in you team project to utilize Cores more effectively.  Here are some thoughts to add to your story of Computers and Networks...
