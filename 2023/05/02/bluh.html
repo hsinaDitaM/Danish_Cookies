@@ -1,0 +1,114 @@
+<p>&lt;!DOCTYPE html&gt;</p>
+<html>
+  <head>
+    <title>Color Matcher</title>
+    <style>
+      #game-board {
+        display: flex;
+        flex-wrap: wrap;
+        width: 300px;
+      }
+
+      .square {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      #target-color {
+        width: 50px;
+        height: 50px;
+        margin: 10px 0;
+        border-radius: 5px;
+      }
+
+      #timer {
+        margin-top: 10px;
+      }
+
+      #start-button {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Color Matcher</h1>
+    <div id="game-board"></div>
+    <div id="target-color"></div>
+    <div id="timer">Time remaining: <span id="time-remaining"></span></div>
+    <button id="start-button">Start</button>
+    <script>
+      // Define the game variables
+      var gameColors = ['red', 'green', 'blue', 'yellow', 'purple', 'orange'];
+      var gameBoardSize = 9;
+      var targetColor;
+      var timeRemaining;
+      var timerId;
+
+      // Set up the game board
+      var gameBoard = document.getElementById('game-board');
+      for (var i = 0; i < gameBoardSize; i++) {
+        var square = document.createElement('div');
+        square.classList.add('square');
+        gameBoard.appendChild(square);
+      }
+
+      // Add event listeners to the squares
+      var squares = document.getElementsByClassName('square');
+      for (var i = 0; i < squares.length; i++) {
+        squares[i].addEventListener('click', function() {
+          if (this.style.backgroundColor === targetColor) {
+            endGame(true);
+          } else {
+            this.style.backgroundColor = '#333';
+          }
+        });
+      }
+
+      // Set up the start button
+      var startButton = document.getElementById('start-button');
+      startButton.addEventListener('click', function() {
+        startGame();
+      });
+
+      // Define the startGame function
+      function startGame() {
+        // Reset the game board
+        for (var i = 0; i < squares.length; i++) {
+          squares[i].style.backgroundColor = gameColors[Math.floor(Math.random() * gameColors.length)];
+        }
+
+        // Choose a target color
+        targetColor = gameColors[Math.floor(Math.random() * gameColors.length)];
+        document.getElementById('target-color').style.backgroundColor = targetColor;
+
+        // Set the timer
+        timeRemaining = 10;
+        document.getElementById('time-remaining').innerHTML = timeRemaining;
+        timerId = setInterval(function() {
+          timeRemaining--;
+          document.getElementById('time-remaining').innerHTML = timeRemaining;
+          if (timeRemaining === 0) {
+            endGame(false);
+          }
+        }, 1000);
+
+        // Disable the start button
+        startButton.disabled = true;
+      }
+
+      // Define the endGame function
+      function endGame(win) {
+        clearInterval(timerId);
+        if (win) {
+          alert('You win!');
+        } else {
+          alert('You lose!');
+        }
+        startButton.disabled = false;
+      }
+    </script>
+  </body>
+</html>
