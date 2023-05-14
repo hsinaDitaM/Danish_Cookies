@@ -32,4 +32,4 @@ This option is incorrect. Both programs correctly move the robot to the gray squ
 
 # Reflection:
 
-i feel good about the ap exam although there were topics that i struggled with and i need to go back and re-study them over the weekend. fun. 
+i feel good about the ap exam although there were topics that i struggled with and i need to go back and re-study them over the weekend. fun. f
