@@ -14,7 +14,6 @@
       min-height: 100vh;
       flex-direction: column;
     }
-    
     .chatbox {
       width: 500px;
       background-color: #f7f7f7;
@@ -23,23 +22,19 @@
       box-shadow: 8px 8px 16px #d9d9d9, -8px -8px 16px #ffffff;
       margin: auto;
     }
-    
     .message {
       margin-bottom: 10px;
       position: relative;
     }
-    
     .user {
       color: #007bff;
       font-weight: bold;
       display: inline-block;
     }
-    
     .user-message {
       display: inline-block;
       margin-left: 5px;
     }
-    
     .timestamp {
       font-size: 0.8em;
       color: #888;
@@ -47,7 +42,6 @@
       right: 0;
       bottom: 0;
     }
-    
     input[type="text"] {
       width: 95%;
       padding: 12px;
@@ -56,7 +50,6 @@
       background-color: #f7f7f7;
       box-shadow: inset 6px 6px 12px #d9d9d9, inset -6px -6px 12px #ffffff;
     }
-    
     button {
       padding: 12px;
       margin-top: 10px;
@@ -68,7 +61,6 @@
       box-shadow: 6px 6px 12px #d9d9d9, -6px -6px 12px #ffffff;
       width: 100%;
     }
-
     .username-box {
       width: 500px;
       background-color: #f7f7f7;
@@ -77,7 +69,6 @@
       box-shadow: 8px 8px 16px #d9d9d9, -8px -8px 16px #ffffff;
       margin-top: 5px;
     }
-
     .username-input {
       width: 70%;
       padding: 8px;
@@ -87,7 +78,6 @@
       box-shadow: inset 4px 4px 8px #d9d9d9, inset -4px -4px 8px #ffffff;
       margin-right: 10px;
     }
-
     .submit-username {
       padding: 8px;
       background-color: #007bff;
@@ -111,29 +101,16 @@
     <div id="messages">
       <!-- Chat messages will be dynamically added here -->
     </div>
-
-
-
-
     <div>
         <input type="text" id="input-message" placeholder="Type your message..." />
         <button onclick="sendMessage()">Send</button>
       </div>
     </div>
-  
-  
-  
     <script>
-      // JavaScript code goes here
-  
       function sendMessage() {
-        // Retrieve the input message
         var inputMessage = document.getElementById('input-message').value;
-  
-        // Clear the input field
         document.getElementById('input-message').value = '';
   
-        // Create a new message element
         var messageElement = document.createElement('div');
         messageElement.classList.add('message');
   
