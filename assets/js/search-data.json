@@ -963,6 +963,14 @@
   
 
   
+      ,"page12": {
+          "title": "Javascript Ticket",
+          "content": ". NFL TEAMS, RECEIVES, TOUCHDOWNS, AND YARDS . . . .",
+          "url": "https://hsinaditam.github.io/Danish_Cookies/Javascript-Ticket/",
+          "relUrl": "/Javascript-Ticket/",
+          "date": ""
+      }
+      
   
 
   
@@ -972,7 +980,6 @@
   
 
   
-
   
 
   
@@ -982,10 +989,14 @@
   
 
   
+
   
 
   
-      ,"page21": {
+  
+
+  
+      ,"page22": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://hsinaditam.github.io/Danish_Cookies/robots.txt",
