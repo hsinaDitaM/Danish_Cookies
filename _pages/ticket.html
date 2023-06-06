@@ -4,463 +4,250 @@ title: Javascript Ticket
 permalink: /Javascript-Ticket/
 ---
 
-<br>
-<h2><center> NFL TEAMS, RECEIVES, TOUCHDOWNS, AND YARDS</center></h2>
-<br>
+<!DOCTYPE html>
 <html>
 <head>
-  <style>
-     table {
-      border-collapse: collapse;
-      width: 100%;
-      background-color: #f0f0f0;
-      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.5);
-      border-radius: 10px;
-    }
-    th, td {
-      border: 1px solid #e0e0e0;
-      padding: 8px;
-      text-align: left;
-    }
-    th {
-      background-color: #e0e0e0;
-      font-weight: bold;
-    }
-    tbody tr:nth-child(even) {
-      background-color: #f8f8f8;
-    }
-    tbody tr:hover {
-      background-color: #e0e0e0;
-    }
+    <title>Snake Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+        }
 
-  </style>
+        #game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #game-board {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            border: 2px solid #333;
+            background-color: #ddd;
+            display: grid;
+            grid-template-columns: repeat(20, 1fr);
+        }
+
+        .snake, .food {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            background-color: #4CAF50;
+            border-radius: 50%;
+        }
+
+        .food {
+            background-color: #FF5722;
+        }
+
+        #score-container {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #best-score-container {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        #score-table {
+            margin-bottom: 20px;
+        }
+
+        #score-table td {
+            padding: 5px 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-<script src="https://cdn.jsdelivr.net/npm/pandas-js@1.2.0/dist/pandas.min.js"></script>
+    <div id="game-container">
+        <h1>Snake Game</h1>
+        <table id="score-table">
+            <tr>
+                <td>Score:</td>
+                <td id="score">0</td>
+            </tr>
+            <tr>
+                <td>Best Score:</td>
+                <td id="best-score">0</td>
+            </tr>
+        </table>
+        <div id="game-board"></div>
+    </div>
 
-  <div id="maxValueTable"></div>
-  <br>
-  <div id="maxValueTableTouchdowns"></div>
-  <br>
-  <div id="maxValueTableYards"></div>
-  <br>
-  <div id="result"></div>
+    <script>
+    // game variables
+    var gridSize = 20; // size of each grid cell
+    var gridWidth = 400 / gridSize; // number of grid cells horizontally
+    var gridHeight = 400 / gridSize; // number of grid cells vertically
+    var snake = [{ x: 0, y: 0 }]; // initial snake position
+    var food = { x: 0, y: 0 }; // initial food position
+    var direction = "right"; // initial direction of the snake
+    var gameLoop; // variable to store the game loop interval
+    var score = 0; // current score
+    var bestScore = 0; // best score
 
+    // initialize the game
+    function init() {
+        bestScore = getBestScoreFromLocalStorage(); // retrieve the best score from localStorage
+        document.getElementById("best-score").innerText = bestScore; // display the best score on the page
 
-  
-<script>
-  const url = 'https://nfl-team-stats.p.rapidapi.com/v1/nfl-stats/teams/receiving-stats/offense/2019';
-  let favoriteTeams = []; 
-  let sortDirection = 'asc'; 
-  let sortBy = 0; 
+        createFood(); // create initial food
+        gameLoop = setInterval(update, 100); // start the game loop to update the game state
+        document.addEventListener("keydown", changeDirection); // listen for keyboard events
 
-  function setCookie(name, value, days) {
-    const expires = new Date();
-    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
-    document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
-  }
-
-  function getCookie(name) {
-    const cookies = document.cookie.split(';');
-    for (let i = 0; i < cookies.length; i++) {
-      const cookie = cookies[i].trim();
-      if (cookie.startsWith(`${name}=`)) {
-        return cookie.substring(name.length + 1);
-      }
-    }
-    return '';
-  }
-
-  function handleCheckboxChange(checkbox, teamName) {
-    if (checkbox.checked) {
-      favoriteTeams.push(teamName);
-    } else {
-      const index = favoriteTeams.indexOf(teamName);
-      if (index !== -1) {
-        favoriteTeams.splice(index, 1);
-      }
-    }
-    console.log(favoriteTeams); 
-
-    setCookie('favoriteTeams', JSON.stringify(favoriteTeams), 30);
-  }
-
-  function initializeCheckboxStates() {
-    const favoriteTeamsCookie = getCookie('favoriteTeams');
-    if (favoriteTeamsCookie) {
-      favoriteTeams = JSON.parse(favoriteTeamsCookie);
-
-      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-      checkboxes.forEach(checkbox => {
-        const teamName = checkbox.getAttribute('data-team-name');
-        checkbox.checked = favoriteTeams.includes(teamName);
-      });
-    }
-  }
-
-  function sortTable(columnIndex) {
-    const table = document.getElementById('teamTable');
-    const tbody = table.querySelector('tbody');
-    const rows = Array.from(tbody.querySelectorAll('tr'));
-
-    sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
-    sortBy = columnIndex - 1;
-
-    const arrows = table.querySelectorAll('.arrow');
-    arrows.forEach(arrow => arrow.classList.remove('up', 'down'));
-
-    const arrow = arrows[columnIndex - 1];
-    arrow.classList.add(sortDirection === 'asc' ? 'up' : 'down');
-
-    rows.sort((rowA, rowB) => {
-      const cellA = rowA.cells[columnIndex].textContent;
-      const cellB = rowB.cells[columnIndex].textContent;
-      return sortDirection === 'asc' ? cellA.localeCompare(cellB) : cellB.localeCompare(cellA);
-    });
-
-    while (tbody.firstChild) {
-      tbody.removeChild(tbody.firstChild);
+        var restartButton = document.getElementById("restart-button"); // get the restart button element
+        restartButton.addEventListener("click", restartGame); // add click event listener to restart the game
     }
 
-    rows.forEach(row => tbody.appendChild(row));
-  }
-
-  fetch(url, {
-    method: 'GET',
-    headers: {
-      'X-RapidAPI-Key': 'fdcfde47b5msh587d8d1cc3ff1dap13f3e3jsnb4f74da50f3e',
-      'X-RapidAPI-Host': 'nfl-team-stats.p.rapidapi.com'
+    // restart the game
+    function restartGame() {
+        clearInterval(gameLoop); // clear the game loop interval
+        snake = [{ x: 0, y: 0 }]; // reset the snake position
+        direction = "right"; // reset the direction
+        score = 0; // reset the score
+        document.getElementById("score").innerText = score; // update the score display
+        createFood(); // create new food
+        gameLoop = setInterval(update, 100); // start the game loop again
     }
-  })
-    .then(response => response.json())
-    .then(data => {
-      const table = document.createElement('table');
-      table.id = 'teamTable'; 
 
-      const thead = document.createElement('thead');
-      const headerRow = document.createElement('tr');
-      const headers = ['Favorites', 'Team', 'Receives', 'Touchdowns', 'Yards'];
+    // create food at a random position
+    function createFood() {
+        food.x = Math.floor(Math.random() * gridWidth); // generate random x coordinate
+        food.y = Math.floor(Math.random() * gridHeight); // generate random y coordinate
+    }
 
-      headers.forEach((headerText, index) => {
-        const th = document.createElement('th');
-        if (index > 0) {
-          const arrowUp = document.createElement('span');
-          arrowUp.classList.add('arrow', 'up');
-          arrowUp.addEventListener('click', () => sortTable(index));
-          th.appendChild(arrowUp);
+    // update the game state
+    function update() {
+        var head = { x: snake[0].x, y: snake[0].y }; // current head position
+
+        // update the snake's head position based on the current direction
+        switch (direction) {
+            case "up":
+                head.y--;
+                break;
+            case "down":
+                head.y++;
+                break;
+            case "left":
+                head.x--;
+                break;
+            case "right":
+                head.x++;
+                break;
         }
-        th.appendChild(document.createTextNode(headerText));
-        if (index > 0) {
-          const arrowDown = document.createElement('span');
-          arrowDown.classList.add('arrow', 'down');
-          arrowDown.addEventListener('click', () => sortTable(index));
-          th.appendChild(arrowDown);
+
+        // check if the snake has collided with the walls or itself
+        if (
+            head.x < 0 ||
+            head.x >= gridWidth ||
+            head.y < 0 ||
+            head.y >= gridHeight ||
+            checkCollision(head)
+        ) {
+            gameOver();
+            return;
         }
-        headerRow.appendChild(th);
-      });
 
-      thead.appendChild(headerRow);
-      table.appendChild(thead);
+        // check if the snake has eaten the food
+        if (head.x === food.x && head.y === food.y) {
+            score++;
+            document.getElementById("score").innerText = score; // update the score display
+            createFood(); // generate new food
+        } else {
+            snake.pop(); // remove the tail segment if the snake hasn't eaten the food
+        }
 
-      const tbody = document.createElement('tbody');
-      data._embedded.teamReceivingStatsList.forEach(team => {
-        const row = document.createElement('tr');
+        snake.unshift(head); // add the new head segment to the snake
 
-        const checkboxCell = document.createElement('td');
-        const checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
-        checkbox.setAttribute('data-team-name', team.name);
-        checkbox.addEventListener('change', () => handleCheckboxChange(checkbox, team.name));
-        checkboxCell.appendChild(checkbox);
-        row.appendChild(checkboxCell);
+        draw(); // update the game board
+    }
 
-        const columns = [team.name, team.receives, team.touchdowns, team.yards];
+    // check if the snake has collided with itself
+    function checkCollision(head) {
+        for (var i = 1; i < snake.length; i++) {
+            if (head.x === snake[i].x && head.y === snake[i].y) {
+                return true;
+            }
+        }
+        return false;
+    }
 
-        columns.forEach(columnText => {
-          const td = document.createElement('td');
-          td.appendChild(document.createTextNode(columnText));
-          row.appendChild(td);
+    // end the game
+    function gameOver() {
+        clearInterval(gameLoop); // clear the game loop interval
+        updateBestScore(); // update the best score
+        alert("Game Over!");
+    }
+
+    // draw the game board
+    function draw() {
+        var gameBoard = document.getElementById("game-board");
+        gameBoard.innerHTML = "";
+
+        // draw the snake
+        snake.forEach(function (segment) {
+            var snakeSegment = document.createElement("div");
+            snakeSegment.className = "snake";
+            snakeSegment.style.left = segment.x * gridSize + "px";
+            snakeSegment.style.top = segment.y * gridSize + "px";
+            gameBoard.appendChild(snakeSegment);
         });
 
-        tbody.appendChild(row);
-      });
-
-      table.appendChild(tbody);
-
-      document.getElementById('result').appendChild(table);
-
-      initializeCheckboxStates();
-    })
-    .catch(error => {
-      console.error(error);
-    });
-
-
-  function findMaxValue(columnIndex, data) {
-    let maxValue = 0;
-
-    data._embedded.teamReceivingStatsList.forEach(team => {
-      const value = team[columnIndex];
-      if (value > maxValue) {
-        maxValue = value;
-      }
-    });
-
-    return maxValue;
-  }
-
- 
-  function findMaxValue(columnIndex, data) {
-    let maxValue = 0;
-    let maxTeam = '';
-
-    data._embedded.teamReceivingStatsList.forEach(team => {
-      const value = team[columnIndex];
-      if (value > maxValue) {
-        maxValue = value;
-        maxTeam = team.name;
-      }
-    });
-
-    return { value: maxValue, team: maxTeam };
-  }
-
-  fetch(url, {
-    method: 'GET',
-    headers: {
-      'X-RapidAPI-Key': 'fdcfde47b5msh587d8d1cc3ff1dap13f3e3jsnb4f74da50f3e',
-      'X-RapidAPI-Host': 'nfl-team-stats.p.rapidapi.com'
+        // draw the food
+        var foodElement = document.createElement("div");
+        foodElement.className = "food";
+        foodElement.style.left = food.x * gridSize + "px";
+        foodElement.style.top = food.y * gridSize + "px";
+        gameBoard.appendChild(foodElement);
     }
-  })
-    .then(response => response.json())
-    .then(data => {
-      const maxData = findMaxValue('receives', data);
 
-      // Create the table to display the maximum value and the team name
-      const table = document.createElement('table');
-      const thead = document.createElement('thead');
-      const headerRow = document.createElement('tr');
-      const thValue = document.createElement('th');
-      thValue.textContent = 'Most Receives';
-      headerRow.appendChild(thValue);
-      const thTeam = document.createElement('th');
-      thTeam.textContent = 'Team';
-      headerRow.appendChild(thTeam);
-      thead.appendChild(headerRow);
-      table.appendChild(thead);
+    // change the direction of the snake based on keyboard input
+    function changeDirection(event) {
+        var keyPressed = event.key.toLowerCase();
 
-      const tbody = document.createElement('tbody');
-      const row = document.createElement('tr');
-      const tdValue = document.createElement('td');
-      tdValue.textContent = maxData.value;
-      row.appendChild(tdValue);
-      const tdTeam = document.createElement('td');
-      tdTeam.textContent = maxData.team;
-      row.appendChild(tdTeam);
-      tbody.appendChild(row);
-      table.appendChild(tbody);
-
-      // Display the table
-      document.getElementById('maxValueTable').appendChild(table);
-    })
-    .catch(error => {
-      console.error(error);
-    });
-
-      // Function to find the team with the maximum value in a specific column of the data
-  function findMaxValue(columnIndex, data) {
-    let maxValue = 0;
-    let maxTeam = '';
-
-    data._embedded.teamReceivingStatsList.forEach(team => {
-      const value = team[columnIndex];
-      if (value > maxValue) {
-        maxValue = value;
-        maxTeam = team.name;
-      }
-    });
-
-    return { value: maxValue, team: maxTeam };
-  }
-
-  // Fetch data from the API and find the maximum value for the "Touchdowns" column
-  fetch(url, {
-    method: 'GET',
-    headers: {
-      'X-RapidAPI-Key': 'fdcfde47b5msh587d8d1cc3ff1dap13f3e3jsnb4f74da50f3e',
-      'X-RapidAPI-Host': 'nfl-team-stats.p.rapidapi.com'
+        if (keyPressed === "a" && direction !== "right") {
+            direction = "left";
+        } else if (keyPressed === "w" && direction !== "down") {
+            direction = "up";
+        } else if (keyPressed === "d" && direction !== "left") {
+            direction = "right";
+        } else if (keyPressed === "s" && direction !== "up") {
+            direction = "down";
+        }
     }
-  })
-    .then(response => response.json())
-    .then(data => {
-      const maxData = findMaxValue('touchdowns', data);
 
-      // Create the table to display the maximum value and the team name
-      const table = document.createElement('table');
-      const thead = document.createElement('thead');
-      const headerRow = document.createElement('tr');
-      const thValue = document.createElement('th');
-      thValue.textContent = 'Most Touchdowns';
-      headerRow.appendChild(thValue);
-      const thTeam = document.createElement('th');
-      thTeam.textContent = 'Team';
-      headerRow.appendChild(thTeam);
-      thead.appendChild(headerRow);
-      table.appendChild(thead);
-
-      const tbody = document.createElement('tbody');
-      const row = document.createElement('tr');
-      const tdValue = document.createElement('td');
-      tdValue.textContent = maxData.value;
-      row.appendChild(tdValue);
-      const tdTeam = document.createElement('td');
-      tdTeam.textContent = maxData.team;
-      row.appendChild(tdTeam);
-      tbody.appendChild(row);
-      table.appendChild(tbody);
-
-      // Display the table
-      document.getElementById('maxValueTableTouchdowns').appendChild(table);
-    })
-    .catch(error => {
-      console.error(error);
-    });
-
-
-  // Function to find the team with the maximum value in a specific column of the data
-  function findMaxValue(columnIndex, data) {
-    let maxValue = 0;
-    let maxTeam = '';
-
-    data._embedded.teamReceivingStatsList.forEach(team => {
-      const value = team[columnIndex];
-      if (value > maxValue) {
-        maxValue = value;
-        maxTeam = team.name;
-      }
-    });
-
-    return { value: maxValue, team: maxTeam };
-  }
-
-  // Fetch data from the API and find the maximum value for the "Yards" column
-  fetch(url, {
-    method: 'GET',
-    headers: {
-      'X-RapidAPI-Key': 'fdcfde47b5msh587d8d1cc3ff1dap13f3e3jsnb4f74da50f3e',
-      'X-RapidAPI-Host': 'nfl-team-stats.p.rapidapi.com'
+    // update the best score and store it in localStorage
+    function updateBestScore() {
+        if (score > bestScore) {
+            bestScore = score;
+            document.getElementById("best-score").innerText = bestScore; // update the best score display
+            setBestScoreInLocalStorage(bestScore); // store the best score in localStorage
+        }
     }
-  })
-    .then(response => response.json())
-    .then(data => {
-      const maxData = findMaxValue('yards', data);
 
-      // Create the table to display the maximum value and the team name
-      const table = document.createElement('table');
-      const thead = document.createElement('thead');
-      const headerRow = document.createElement('tr');
-      const thValue = document.createElement('th');
-      thValue.textContent = 'Most Yards';
-      headerRow.appendChild(thValue);
-      const thTeam = document.createElement('th');
-      thTeam.textContent = 'Team';
-      headerRow.appendChild(thTeam);
-      thead.appendChild(headerRow);
-      table.appendChild(thead);
-
-      const tbody = document.createElement('tbody');
-      const row = document.createElement('tr');
-      const tdValue = document.createElement('td');
-      tdValue.textContent = maxData.value;
-      row.appendChild(tdValue);
-      const tdTeam = document.createElement('td');
-      tdTeam.textContent = maxData.team;
-      row.appendChild(tdTeam);
-      tbody.appendChild(row);
-      table.appendChild(tbody);
-
-      // Display the table
-      document.getElementById('maxValueTableYards').appendChild(table);
-    })
-    .catch(error => {
-      console.error(error);
-    });
-
-
-      fetch(url, {
-    method: 'GET',
-    headers: {
-      'X-RapidAPI-Key': 'fdcfde47b5msh587d8d1cc3ff1dap13f3e3jsnb4f74da50f3e',
-      'X-RapidAPI-Host': 'nfl-team-stats.p.rapidapi.com'
+    // store the best score in localStorage
+    function setBestScoreInLocalStorage(score) {
+        localStorage.setItem("bestScore", score);
     }
-  })
-      .then(response => response.json())
-    .then(data => {
-      const pd = window.pandas; // Reference to the pandas-js library
 
-      // Convert the data to a DataFrame using pandas-js
-      const df = new pd.DataFrame(data._embedded.teamReceivingStatsList);
+    // retrieve the best score from localStorage
+    function getBestScoreFromLocalStorage() {
+        return localStorage.getItem("bestScore") || 0;
+    }
 
-      // Perform data manipulation using pandas-js
-      const maxReceives = df.max('receives');
-      const maxTouchdowns = df.max('touchdowns');
-      const maxYards = df.max('yards');
+    // start the game
+    init();
 
-      // Display the results
-      document.getElementById('maxValueTable').innerHTML = `
-        <table>
-          <thead>
-            <tr>
-              <th>Most Receives</th>
-              <th>Team</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>${maxReceives.receives}</td>
-              <td>${maxReceives.name}</td>
-            </tr>
-          </tbody>
-        </table>
-      `;
-
-      document.getElementById('maxValueTableTouchdowns').innerHTML = `
-        <table>
-          <thead>
-            <tr>
-              <th>Most Touchdowns</th>
-              <th>Team</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>${maxTouchdowns.touchdowns}</td>
-              <td>${maxTouchdowns.name}</td>
-            </tr>
-          </tbody>
-        </table>
-      `;
-
-      document.getElementById('maxValueTableYards').innerHTML = `
-        <table>
-          <thead>
-            <tr>
-              <th>Most Yards</th>
-              <th>Team</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>${maxYards.yards}</td>
-              <td>${maxYards.name}</td>
-            </tr>
-          </tbody>
-        </table>
-      `;
-    })
-    .catch(error => {
-      console.error(error);
-    });
-</script>
+    </script>
 </body>
 </html>
